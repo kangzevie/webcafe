@@ -2,38 +2,93 @@
 
 /*  스타일 초기화 */
 *, *::before, *::after{
-  margin: 0
-  padding: 0
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html {
+  font-size: 10px;
+}
+ul {
+  list-style: none;
+}
+a{
+  text-decoration: none;
+  color: inherit;
+}
+/* 숨김콘텐츠 */
+.readable-hidden{
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  margin: -1px;
+}
+/* 기본스타일 */
+body{
+  color: #181818;
+  font-size: 1.4rem;
+}
+
+/* 컨테이너 */
+.container {
+  background: linear-gradient(to bottom, #ccc, #eee 50%, #fff 60%, #fff 100%);
 }
 
 .header, .visual, .main, .slogan, .footer {
-  background: #ff0;
   width: 940px;
   margin: 0 auto;
 }
-
 .bg-footer{
-  background: purple;
+  background: linear-gradient(to bottom, #ccc, #eee 50%, #fff 60%, #fff 100%);
 }
-
 /* 헤더 */
 .header {
   position: relative;
-  background: pink;
+  background: #fff;
+  padding : 0 30px 45px;
+  border-radius: 0 0 15px 15px;
 }
 /* 로고 */
 .logo {
-  background: blue;
   position: absolute;
   top: 45px;
   left: 65px;
 }
+/* 안내링크 */
+.member {
+  text-align: right;
+  font-size: 0px;
+  margin: 2px 0;
+  margin-right: -10px;
 
+}
+.member li, .member a {
+  display: inline-block;
+}
+
+.member li {
+  font-size: 1.4rem;
+  text-transform: uppercase;
+}
+.bar::before {
+  content: ":";
+  margin: 0 1px;
+}
+.member a{
+  padding: 5px 10px;
+}
+.menu{
+  background:#235864 linear-gradient(to bottom, #ef6d3e 1%,#8c3310 30%,#752201 75%,#bc3c0d 100%);
+  margin-top: 10px;
+}
 /* 비주얼 */
 .visual{
   height: 120px;
 }
-/* 메인 콘첸츠 */
+
+/* 메인 콘텐츠 */
 .main {
   background: lime;
   height: 450px;
@@ -41,17 +96,14 @@
   justify-content : space-evenly;
   flex-direction: row;
 }
-
 .group1{
   background: pink;
   width: 250px;
 }
-
 .group2{
   background: pink;
   width: 380px;
 }
-
 .group3{
   background: pink;
   width: 190px;
